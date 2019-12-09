@@ -8,6 +8,7 @@ class SegTree{
 protected:
     std::vector<T> tree; // Segment Tree
     int base; // to indicate number of non-leaf nodes
+    int range; // to check the range of the index
     T (*oper)(T,T); // merge function pointer
     T id_elem; // identity element
     T _get_value(int st, int fn, int ns, int nf, int num);
@@ -30,6 +31,7 @@ template<typename T>
 SegTree<T>::SegTree(int sz, T id, T (*fnc)(T,T)){
     id_elem=id;
     oper=fnc;
+    range=sz;
     base=1;
     while(base<sz) base<<=1;
     tree.resize(base*2+2);
@@ -57,8 +59,12 @@ This function is wrapper function of _get_value
 */
 template<typename T>
 T SegTree<T>::get_value(int st, int fn){
-    T ret=SegTree<T>::_get_value(st,fn,1,-1,1);
-    return ret;
+    if(1<=st && st<=fn && fn<=range){
+        T ret=SegTree<T>::_get_value(st,fn,1,-1,1);
+        return ret;
+    }
+    //if range is out of bound, then function returns identity element
+    return id_elem;
 }
 
 /*
@@ -66,12 +72,15 @@ Updating the Segment Tree at idx by val
 */
 template<typename T>
 void SegTree<T>::update(int idx, T val){
-    idx+=base;
-    tree[idx]=val;
-    idx>>=1;
-    while(idx!=0){
-        tree[idx]=oper(tree[idx*2],tree[idx*2+1]);
+    //update occur only when idx is not out of bound
+    if(1<=idx && idx<=range){
+        idx+=base;
+        tree[idx]=val;
         idx>>=1;
+        while(idx!=0){
+            tree[idx]=oper(tree[idx*2],tree[idx*2+1]);
+            idx>>=1;
+        }
     }
 }
 
