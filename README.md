@@ -35,7 +35,9 @@ Put the headers that is going to be used with your source code at the same direc
 ```
 #include "PrimMst"
 ```
-You can also try the demo source files as an example of how to use the implemented algorithms.
+Or copy the header files into the glibc include directory (ex. /usr/include/c++/VERSIONS/), but please bear in mind that this project does not guarantee that the functions will be completely fine with other standard libraries.
+
+You can try the demo source files as an example of how to use the implemented algorithms after correctly adding those headers.
 
 Team Member (collaborators)
 ----
