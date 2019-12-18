@@ -15,6 +15,7 @@ Some of the implemented algorithms used the data structure defined in different 
 * [Trie](algorithm_headers/trie.h)
 * [Red-Black Tree](algorithm_headers/rbt.h)
 * [Segment Tree](algorithm_headers/rquery.h)
+* [Skip List](algorithm_headers/skip_list.h)
 
 Implemented algorithms
 ----
