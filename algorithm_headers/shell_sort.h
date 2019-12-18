@@ -24,7 +24,7 @@
 #define _SHELL_SORT_H__
 
 template<typename T>
-static void shell_sort(T& item_list, int len) {
+static void shell_sort(T item_list[], int len) {
 	int h = 1;
 	while (h < len / 3) {
 		h = 3 * h + 1; 
