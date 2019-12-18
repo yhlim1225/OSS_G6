@@ -25,7 +25,7 @@
 
 #include <algorithm>
 
-#define INF 1e9
+#define INF 10000000
 using namespace std;
 
 void Floyd_Warshall(int** distance, int n){
