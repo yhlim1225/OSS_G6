@@ -26,6 +26,7 @@ This is the list of algorithms that currently implemented on this project and th
  * [Dijkstra](algorithm_headers/dijkstra.h)
  * [Kruskal](algorithm_headers/kruskal.h)
  * [Disjoint Set](algorithm_headers/disset.h)
+ * [floydwarshall](algorithm_headers/floydwarshall.h)
  * [Bubble Sort](algorithm_headers/bubble_sort.h)
  * [Quick Sort](algorithm_headers/quick_sort.h)
  * [Insertion Sort](algorithm_headers/insertion_sort.h)
