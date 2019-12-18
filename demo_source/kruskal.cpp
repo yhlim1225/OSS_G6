@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #include<iostream>
-#include"Kruskal.h"
+#include"kruskal.h"
 
 int main() {
 	Graph* g = new Graph(4);
