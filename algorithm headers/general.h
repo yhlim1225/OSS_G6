@@ -1,6 +1,8 @@
 #ifndef _GENERAL_H__
 #define _GENERAL_H__
 
+//Random, Swap
+
 #include <stdlib.h>
 #include <stdint.h>
 
