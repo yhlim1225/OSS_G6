@@ -29,7 +29,7 @@ int main(){
 	for(int i = 0 ; i < MAX_VERTICES; ++i){
 		cost[i] = new int[MAX_VERTICES];
 	}
-	int tmp[][MAX_VERTICES] = {{0, 10, 7, 1000, 15, 1000, 1000},{10, 0, 1000, 5, 8, 1000, 1000}, {7, 1000, 0, 1000, 6, 1000, 1000}, {1000, 5, 1000, 0, 12, 6, 1000}, {15, 8, 6, 12, 0, 25, 3}, {1000, 1000, 1000, 6, 25, 0, 1}, {1000, 1000, 1000, 1000, 3, 1, 0}};
+	int tmp[][MAX_VERTICES] = {{0, 10, 7, INF, 15, INF, INF},{10, 0, INF, 5, 8, INF, INF}, {7, INF, 0, INF, 6, INF, INF}, {INF, 5, INF, 0, 12, 6, INF}, {15, 8, 6, 12, 0, 25, 3}, {INF, INF, INF, 6, 25, 0, 1}, {1000, 1000, 1000, 1000, 3, 1, 0}};
 	int distance[MAX_VERTICES];
 	int found[MAX_VERTICES];
 	int n = MAX_VERTICES;
