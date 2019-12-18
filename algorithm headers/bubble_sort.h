@@ -2,6 +2,7 @@ ifndef _BUBBLE_SORT_H
 define _BUBBLE_SORT_H
 
 #include <assert.h>
+#include <general.h>
 
 template<typename T>
 static void BubbleSort(T item_list[], int start, int end)
