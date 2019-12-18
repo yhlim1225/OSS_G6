@@ -30,17 +30,17 @@ template<typename T>
 static void BubbleSort(T item_list[], int start, int end)
 {
 	int i;
-	bool swap = true;
+	bool is_swap = true;
 	assert(start < end);
-	while(swap)
+	while(is_swap)
 	{
-		swap = false;
+		is_swap = false;
 		for(i = start+1; i <= end; i++)
 		{
 			if(item_list[i-1] > item_list[i])
 			{
 				swap(item_list[i-1], item_list[i]);
-				swap=true;
+				is_swap=true;
 			}
 		}
 	}

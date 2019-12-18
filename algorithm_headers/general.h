@@ -35,10 +35,18 @@
 #define RAND(b, e)	(b + rand() % ((e) - (b) + 1))
 
 template<typename T>
-static inline void swap(T &a, T &y)
+static inline void swap(T &a, T &b)
 {
 	T temp(a);
 	a = b;
 	b = temp;
+}
+
+template<typename T>
+static void printlist_int(T & list,int count) {
+	int i;
+	for(i=0;i<count;i++)
+		printf("%d\t ",list[i]);
+	printf("\n");
 }
 #endif
