@@ -26,7 +26,7 @@
 #include <general.h>
 
 template<typename T>
-static void SelectionSort(T& item_list, int start, int end) {
+static void selectionsort(T item_list[], int start, int end) {
 	int i,j;
 	int min_index;
 
