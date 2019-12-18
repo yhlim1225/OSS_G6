@@ -30,7 +30,7 @@ int main(){
 	for(int i = 0 ; i < MAX_VERTICES; ++i){
 		distance[i] = new int[MAX_VERTICES];
 	}
-	int tmp[][MAX_VERTICES] = {{0, 10, 7, INF, 15, INF, INF},{10, 0, INF, 5, 8, INF, INF}, {7, INF, 0, INF, 6, INF, INF}, {INF, 5, INF, 0, 12, 6, INF}, {15, 8, 6, 12, 0, 25, 3}, {INF, INF, INF, 6, 25, 0, 1}, {1000, 1000, 1000, 1000, 3, 1, 0}};
+	int tmp[][MAX_VERTICES] = {{0, 10, 7, INF, 15, INF, INF},{10, 0, INF, 5, 8, INF, INF}, {7, INF, 0, INF, 6, INF, INF}, {INF, 5, INF, 0, 12, 6, INF}, {15, 8, 6, 12, 0, 25, 3}, {INF, INF, INF, 6, 25, 0, 1}, {INF, INF, INF, INF, 3, 1, 0}};
 	int n = MAX_VERTICES;
 	for(int i = 0 ; i < n ; i++){
 		for(int j = 0 ; j < n ; j++)
