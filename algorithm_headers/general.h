@@ -24,7 +24,7 @@
 #define _GENERAL_H__
 
 //Random, Swap
-
+#include <iostream>
 #include <stdlib.h>
 #include <stdint.h>
 
@@ -43,10 +43,22 @@ static inline void swap(T &a, T &b)
 }
 
 template<typename T>
-static void printlist_int(T & list,int count) {
+static inline T min(T a, T b)
+{
+	return (a < b ? a:b);
+}
+
+template<typename T>
+static inline T max(T a, T b)
+{
+	return (a > b ? a:b);
+}
+
+template<typename T>
+static void printlist_int(T list[],int count) {
 	int i;
 	for(i=0;i<count;i++)
 		printf("%d\t ",list[i]);
-	printf("\n");
+	std::cout<<std::endl;
 }
 #endif
