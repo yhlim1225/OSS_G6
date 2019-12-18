@@ -28,7 +28,11 @@ This is the list of algorithms that currently implemented on this project and th
  * [Disjoint Set](algorithm_headers/disset.h)
  * [Bubble Sort](algorithm_headers/bubble_sort.h)
  * [Quick Sort](algorithm_headers/quick_sort.h)
+ * [Insertion Sort](algorithm_headers/insertion_sort.h)
+ * [Selection Sort](algorithm_headers/selection_sort.h)
+ * [Merge Sort](algorithm_headers/merge_sort.h)
  * [Radix Sort](algorithm_headers/radix.h)
+ * [Shell Sort](algorithm_headers/shell_sort.h)
 
 How to use the source files
 ----
