@@ -19,3 +19,4 @@ static inline void swap(T &a, T &y)
 	a = b;
 	b = temp;
 }
+#endif
