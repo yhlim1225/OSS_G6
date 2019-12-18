@@ -36,6 +36,7 @@ This is the list of algorithms that currently implemented on this project and th
  * [Radix Sort](algorithm_headers/radix.h)
  * [Shell Sort](algorithm_headers/shell_sort.h)
  * [Dinic's Maximum Flow](algorithm_headers/network_flow.h)
+ 
 How to use the source files
 ----
 Put the headers that is going to be used with your source code at the same directory and simply include and use the functions. 
