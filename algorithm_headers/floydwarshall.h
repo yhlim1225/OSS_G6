@@ -23,10 +23,8 @@
 #ifndef FloydWarshall_H_INCLUDED
 #define FloydWarshall_H_INCLUDED
 
-#include <algorithm>
-
-#define INF 1e9
-using namespace std;
+#include <general.h>
+#define INF 10000000
 
 void Floyd_Warshall(int** distance, int n){
 
