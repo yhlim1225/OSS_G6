@@ -29,7 +29,7 @@ This is the list of algorithms that currently implemented on this project and th
  * [BST](algorithm_headers/BST.h)
  * [Disjoint Set](algorithm_headers/disset.h)
  * [floydwarshall](algorithm_headers/floydwarshall.h)
- * [Heap Sort] (algorithm_headers/Heap.h)
+ * [Heap Sort] (algorithm_headers/Heapsort.h)
  * [Bubble Sort](algorithm_headers/bubble_sort.h)
  * [Quick Sort](algorithm_headers/quick_sort.h)
  * [Insertion Sort](algorithm_headers/insertion_sort.h)
