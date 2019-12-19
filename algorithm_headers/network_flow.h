@@ -116,5 +116,94 @@ public:
     }
 };
 
+class BipartiteMatching{
+protected:
+    std::vector< std::vector<int> > lst;
+    std::vector<int> G1, G2, dist;
+    std::vector<bool> used;
+    int n, m, res;
+    const int INF=1e9;
+    // size of lst, G1, dist and used is MAXN
+    // size of G2 is MAXM
+    // vertex number should be 1~n in G1 and 1~m in G2
+    // only add edges which is from G1 to G2
+
+
+    void bfs()
+    {
+        std::queue<int> Q;
+        for(int i=0 ; i<G1.size() ; i++){
+            if(!used[i]) Q.push(i), dist[i]=0;
+            else dist[i]=INF;
+        }
+        while(!Q.empty()){
+            int v=Q.front();
+            Q.pop();
+            for(int i=0 ; i<lst[v].size() ; i++){
+                int nxt=lst[v][i];
+                if(G2[nxt]!=-1 && dist[G2[nxt]]==INF){
+                    dist[G2[nxt]]=dist[v]+1;
+                    Q.push(G2[nxt]);
+                }
+            }
+        }
+    }
+
+    bool dfs(int v1)
+    {
+        for(int i=0 ; i<lst[v1].size() ; i++){
+            int v2=lst[v1][i];
+            if(G2[v2]==-1 || (dist[G2[v2]]==dist[v1]+1 && dfs(G2[v2]))){
+                used[v1]=true;
+                G1[v1]=v2;
+                G2[v2]=v1;
+                return true;
+            }
+        }
+        return false;
+    }
+
+public:
+    BipartiteMatching(int a, int b){
+        n=a, m=b;
+        lst.resize(n+5);
+        G1.resize(n+5);
+        dist.resize(n+5);
+        G2.resize(m+5);
+        used.resize(n+5);
+        res=0;
+    }
+    void add_edge(int v1, int v2){
+        lst[v1].push_back(v2);
+    }
+    int get_res() {return res;}
+    int get_match_G1(int v){
+        if(0<=v && v<(int)G1.size()) return G1[v];
+        return -1;
+    }
+    int get_match_G2(int v){
+        if(0<=v && v<(int)G2.size()) return G2[v];
+        return -1;
+    }
+    int Hopcroft_Karp()
+    {
+        int matched=0;
+        for(int i=0 ; i<used.size() ; i++) used[i]=false;
+        for(int i=0 ; i<G1.size() ; i++) G1[i]=-1;
+        for(int i=0 ; i<G2.size() ; i++) G2[i]=-1;
+        while(1){
+            bfs();
+            int flow=0;
+            for(int i=0 ; i<G1.size() ; i++){
+                if(!used[i] && dfs(i)) flow++;
+            }
+            if(flow==0) break;
+            matched+=flow;
+        }
+        res=matched;
+        return matched;
+    }
+
+};
 
 #endif // NETWORK_FLOW_H_INCLUDED
