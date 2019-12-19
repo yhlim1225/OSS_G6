@@ -1,4 +1,5 @@
-#How to contribute
+# How to contribute
+
 To be sure, This project is for learning and practicing algorithms with C++ language.
 
 Anyone is welcome to contribute on our project!
