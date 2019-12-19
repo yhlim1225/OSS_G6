@@ -39,6 +39,7 @@ This is the list of algorithms that currently implemented on this project and th
  * [Topological Sort](algorithm_headers/Topological.h) 
  * [Shell Sort](algorithm_headers/shell_sort.h)
  * [Dinic's Maximum Flow](algorithm_headers/network_flow.h)
+ * [Hopcroft-Karp Maximum Bipartite Matching](algorithm_headers/network_flow.h)
  
 How to use the source files
 ----
